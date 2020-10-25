@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAHkHgQgQzqEPsQ9H8F6acvs29S6eXnrkY",
+            authDomain: "fir-authcomplete-5e51a.firebaseapp.com",
+            databaseURL: "https://fir-authcomplete-5e51a.firebaseio.com",
+            projectId: "fir-authcomplete-5e51a",
+            storageBucket: "fir-authcomplete-5e51a.appspot.com",
+            messagingSenderId: "813139450206",
+            appId: "1:813139450206:web:5987f6ff98a48ba23217cf"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <title>Authentication</title>
 </head>
+
 <body>
-    
+    <div>
+        <input type="text" id="email" placeholder="Email ID">
+        <br>
+        <input type="password" id="password" placeholder="Password">
+        <br>
+        <button id="email_signup">Email Signup</button><button id="email_signin">Email Signin</button><button id="email_signout">Email Signout</button>
+        <br><br>
+        <button id="fb_btn">Facebook Login</button>
+        <br><br>
+        <button id="google_btn">Google Login</button>
+    </div>
+    <script src="app.js"></script>
 </body>
+
 </html>
